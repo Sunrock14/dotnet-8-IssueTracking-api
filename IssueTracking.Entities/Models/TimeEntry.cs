@@ -1,24 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace IssueTracking.Entities.Models;
 
-namespace IssueTracking.Entities.Models
+public class TimeEntry
 {
-    public class TimeEntry
-    {
-        public int Id { get; set; }
-        public double Hours { get; set; }
-        public DateTime Date { get; set; }
-        public string Comment { get; set; }
+    public int Id { get; set; }
+    public double Hours { get; set; }
+    public DateTime Date { get; set; }
+    public string Comment { get; set; }
 
-        // Foreign key
-        public int IssueId { get; set; }
-        public Issue Issue { get; set; }
+    // Foreign key
+    public int IssueId { get; set; }
+    public Issue Issue { get; set; }
 
-        public int UserId { get; set; }
-        public User User { get; set; }
-    }
-
+    public int UserId { get; set; }
+    public User User { get; set; }
 }

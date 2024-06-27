@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IssueTracking.Entities.Models
 {
-    public class Attachment
+    public class FileAttachment
     {
         public int Id { get; set; }
         public string FileName { get; set; }
