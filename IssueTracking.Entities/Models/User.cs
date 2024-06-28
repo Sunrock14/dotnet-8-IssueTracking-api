@@ -1,17 +1,18 @@
-﻿namespace IssueTracking.Entities.Models;
+﻿using IssueTracking.Core.BaseRepository;
 
-public class User
+namespace IssueTracking.Entities.Models;
+
+public class User : IEntity
 {
     public int Id { get; set; }
-    public string Username { get; set; }
-    public string Password { get; set; }
-    public string Email { get; set; }
+    public string Username { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
 
-    // Role relationship
     public int RoleId { get; set; }
-    public Role Role { get; set; }
+    public Role Role { get; set; } = new();
 
-    public List<Issue> ReportedIssues { get; set; }
+    public ICollection<Issue>? ReportedIssues { get; set; }
 
-    public List<IssueAssignee> IssueAssignees { get; set; }
+    public ICollection<IssueAssignee>? IssueAssignees { get; set; }
 }

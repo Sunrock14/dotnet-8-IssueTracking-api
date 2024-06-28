@@ -1,9 +1,11 @@
-﻿namespace IssueTracking.Entities.Models;
+﻿using IssueTracking.Core.BaseRepository;
 
-public class Role
+namespace IssueTracking.Entities.Models;
+
+public class Role: IEntity
 {
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
-    public List<User> Users { get; set; }
+    public ICollection<User>? Users { get; set; }
 }

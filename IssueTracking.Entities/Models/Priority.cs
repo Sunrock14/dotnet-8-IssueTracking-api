@@ -1,9 +1,11 @@
-﻿namespace IssueTracking.Entities.Models;
+﻿using IssueTracking.Core.BaseRepository;
 
-public class Priority
+namespace IssueTracking.Entities.Models;
+
+public class Priority : IEntity
 {
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
-    public List<Issue> Issues { get; set; }
+    public ICollection<Issue>? Issues { get; set; }
 }

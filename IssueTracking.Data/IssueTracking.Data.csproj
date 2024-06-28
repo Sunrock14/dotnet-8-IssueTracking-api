@@ -14,4 +14,10 @@
     <ProjectReference Include="..\IssueTracking.Entities\IssueTracking.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Mappings\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="UnitOfWork\" />
+  </ItemGroup>
+
 </Project>
