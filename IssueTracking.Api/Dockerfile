@@ -23,3 +23,35 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "IssueTracking.Api.dll"]
+
+
+
+## 1. Aþama: Yapý aþamasý
+## .NET Core SDK görüntüsünü kullanarak derleme yapýyoruz.
+#FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+#
+## Çalýþma klasörünü ayarlýyoruz.
+#WORKDIR /app
+#
+## Proje dosyalarýný kopyalýyoruz.
+#COPY *.csproj ./
+#RUN dotnet restore
+#
+## Tüm kaynak kodlarýný kopyalýyoruz.
+#COPY . ./
+#
+## Uygulamayý yayýn (publish) modunda derliyoruz.
+#RUN dotnet publish -c Release -o out
+#
+## 2. Aþama: Çalýþtýrma aþamasý
+## .NET Core runtime görüntüsünü kullanarak uygulamayý çalýþtýrýyoruz.
+#FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+#
+## Çalýþma klasörünü ayarlýyoruz.
+#WORKDIR /app
+#
+## Yayýnlanmýþ dosyalarý kopyalýyoruz.
+#COPY --from=build /app/out ./
+#
+## Uygulamayý çalýþtýracak komutu tanýmlýyoruz.
+#ENTRYPOINT ["dotnet", "SeninProjeAdi.dll"]

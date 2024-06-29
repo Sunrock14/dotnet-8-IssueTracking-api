@@ -1,4 +1,5 @@
-﻿using IssueTracking.Entities.Models;
+﻿using IssueTracking.Data.Mappings;
+using IssueTracking.Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace IssueTracking.Data.Contexts;
@@ -21,23 +22,17 @@ public class TaskTrackingContext : DbContext
 
     }
 
-    //TODO : FluentApi ekle, Map klasörlerine taşı
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        
-        base.OnModelCreating(modelBuilder);
-
-        modelBuilder.Entity<IssueAssignee>()
-            .HasKey(ia => new { ia.IssueId, ia.UserId });
-
-        modelBuilder.Entity<IssueAssignee>()
-            .HasOne(ia => ia.Issue)
-            .WithMany(i => i.IssueAssignees)
-            .HasForeignKey(ia => ia.IssueId);
-
-        modelBuilder.Entity<IssueAssignee>()
-            .HasOne(ia => ia.User)
-            .WithMany(u => u.IssueAssignees)
-            .HasForeignKey(ia => ia.UserId);
+        modelBuilder.ApplyConfiguration(new CommentMap());
+        modelBuilder.ApplyConfiguration(new FileAttachmentMap());
+        modelBuilder.ApplyConfiguration(new IssueAssingneeMap());
+        modelBuilder.ApplyConfiguration(new IssueMap());
+        modelBuilder.ApplyConfiguration(new PriorityMap());
+        modelBuilder.ApplyConfiguration(new ProjectMap());
+        modelBuilder.ApplyConfiguration(new RoleMap());
+        modelBuilder.ApplyConfiguration(new StatusMap());
+        modelBuilder.ApplyConfiguration(new TimeEntryMap());
+        modelBuilder.ApplyConfiguration(new UserMap());
     }
 }

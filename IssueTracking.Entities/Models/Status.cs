@@ -1,6 +1,8 @@
-﻿namespace IssueTracking.Entities.Models;
+﻿using IssueTracking.Core.BaseRepository;
 
-public class Status
+namespace IssueTracking.Entities.Models;
+
+public class Status : IEntity
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
