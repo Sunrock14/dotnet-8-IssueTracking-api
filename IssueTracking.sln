@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracking.Api", "IssueTracking.Api\IssueTracking.Api.csproj", "{8016A129-A597-405D-B346-202CF55FE57A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IssueTracking.Api", "IssueTracking.Api\IssueTracking.Api.csproj", "{8016A129-A597-405D-B346-202CF55FE57A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracking.Entities", "IssueTracking.Entities\IssueTracking.Entities.csproj", "{4D1FB405-2D7A-4310-9CDD-A42DD3F94788}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IssueTracking.Entities", "IssueTracking.Entities\IssueTracking.Entities.csproj", "{4D1FB405-2D7A-4310-9CDD-A42DD3F94788}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracking.Core", "IssueTracking.Core\IssueTracking.Core.csproj", "{9DB793C2-B55A-46FF-87A5-73EAE0058034}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IssueTracking.Core", "IssueTracking.Core\IssueTracking.Core.csproj", "{9DB793C2-B55A-46FF-87A5-73EAE0058034}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracking.Services", "IssueTracking.Services\IssueTracking.Services.csproj", "{A2EFED17-AABA-4ED4-A20C-D06BBD35F4E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IssueTracking.Services", "IssueTracking.Services\IssueTracking.Services.csproj", "{A2EFED17-AABA-4ED4-A20C-D06BBD35F4E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracking.Data", "IssueTracking.Data\IssueTracking.Data.csproj", "{6FE1605C-91D2-4D57-A4A3-E47F988483C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IssueTracking.Data", "IssueTracking.Data\IssueTracking.Data.csproj", "{6FE1605C-91D2-4D57-A4A3-E47F988483C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracking.Dtos", "IssueTracking.Dtos\IssueTracking.Dtos.csproj", "{A42EE5C0-01F5-4B31-9FEE-DE3778D747AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IssueTracking.Dtos", "IssueTracking.Dtos\IssueTracking.Dtos.csproj", "{A42EE5C0-01F5-4B31-9FEE-DE3778D747AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracking.Mvc", "IssueTracking.Mvc\IssueTracking.Mvc.csproj", "{3C5CC9ED-A398-46E4-BC39-6C4FC937BF26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A42EE5C0-01F5-4B31-9FEE-DE3778D747AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A42EE5C0-01F5-4B31-9FEE-DE3778D747AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A42EE5C0-01F5-4B31-9FEE-DE3778D747AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C5CC9ED-A398-46E4-BC39-6C4FC937BF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C5CC9ED-A398-46E4-BC39-6C4FC937BF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C5CC9ED-A398-46E4-BC39-6C4FC937BF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C5CC9ED-A398-46E4-BC39-6C4FC937BF26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

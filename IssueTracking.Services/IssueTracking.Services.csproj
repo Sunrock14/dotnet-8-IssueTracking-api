@@ -20,4 +20,12 @@
     <Folder Include="Extensions\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IssueTracking.Data\IssueTracking.Data.csproj" />
+  </ItemGroup>
+
 </Project>

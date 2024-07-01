@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @await Html.PartialAsync("~/Views/Shared/_metaData.cshtml")
+    @await Html.PartialAsync("~/Views/Shared/_css.cshtml")
+    @await RenderSectionAsync("styles", required: false)
+
+</head>
+<body>
+    @await Component.InvokeAsync("Sidebar")
+    @await Component.InvokeAsync("Topbar")
+    @RenderBody()
+    @await Html.PartialAsync("~/Views/Shared/_js.cshtml")
+    @await RenderSectionAsync("Styles", required: false)
+</body>
+</html>

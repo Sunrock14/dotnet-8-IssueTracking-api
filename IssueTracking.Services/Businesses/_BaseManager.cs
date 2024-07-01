@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using IssueTracking.Data.UnitOfWork;
 
-namespace IssueTracking.Services.Businesses
+namespace IssueTracking.Services.Businesses;
+
+public class _BaseManager
 {
-    internal class _BaseManager
+    private readonly IUnitOfWork? UnitOfWork;
+    private readonly IMapper? Mapper;
+
+    public _BaseManager(IMapper? mapper, IUnitOfWork? unitOfWork)
     {
+        Mapper = mapper;
+        UnitOfWork = unitOfWork;
     }
 }
