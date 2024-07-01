@@ -8,15 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Automapper\Profiles\" />
-    <Folder Include="Businesses\Issue\" />
-    <Folder Include="Businesses\IssueAssignee\" />
-    <Folder Include="Businesses\FileAttachment\" />
-    <Folder Include="Businesses\TimeEntry\" />
-    <Folder Include="Businesses\Status\" />
-    <Folder Include="Businesses\Role\" />
+    <Folder Include="Businesses\NewFolder\" />
     <Folder Include="Businesses\User\" />
-    <Folder Include="Businesses\Priority\" />
-    <Folder Include="Businesses\Project\" />
     <Folder Include="Extensions\" />
   </ItemGroup>
 

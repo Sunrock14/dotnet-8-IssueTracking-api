@@ -3,7 +3,7 @@
 <head>
     @await Html.PartialAsync("~/Views/Shared/_metaData.cshtml")
     @await Html.PartialAsync("~/Views/Shared/_css.cshtml")
-    @await RenderSectionAsync("styles", required: false)
+    @await RenderSectionAsync("Styles", required: false)
 
 </head>
 <body>
@@ -11,6 +11,6 @@
     @await Component.InvokeAsync("Topbar")
     @RenderBody()
     @await Html.PartialAsync("~/Views/Shared/_js.cshtml")
-    @await RenderSectionAsync("Styles", required: false)
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -2,6 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
+@section Styles {
+
+}
+@section Scripts{
+
+}
+@await Html.PartialAsync("~/Views/Home/_TaskDetailPartial.cshtml")
+@await Html.PartialAsync("~/Views/Home/_newTaskModalPartial.cshtml")
 <main class="nxl-container apps-container apps-tasks">
     <div class="nxl-content without-header nxl-full-content">
         <!-- [ Main Content ] start -->
