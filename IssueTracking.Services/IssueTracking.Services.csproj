@@ -7,18 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Automapper\Profiles\" />
     <Folder Include="Businesses\NewFolder\" />
-    <Folder Include="Businesses\User\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IssueTracking.Core\IssueTracking.Core.csproj" />
     <ProjectReference Include="..\IssueTracking.Data\IssueTracking.Data.csproj" />
+    <ProjectReference Include="..\IssueTracking.Dtos\IssueTracking.Dtos.csproj" />
+    <ProjectReference Include="..\IssueTracking.Entities\IssueTracking.Entities.csproj" />
   </ItemGroup>
 
 </Project>

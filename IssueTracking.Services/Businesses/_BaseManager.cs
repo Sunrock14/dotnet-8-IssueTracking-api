@@ -5,8 +5,8 @@ namespace IssueTracking.Services.Businesses;
 
 public class _BaseManager
 {
-    private readonly IUnitOfWork? UnitOfWork;
-    private readonly IMapper? Mapper;
+    public readonly IUnitOfWork? UnitOfWork;
+    public readonly IMapper? Mapper;
 
     public _BaseManager(IMapper? mapper, IUnitOfWork? unitOfWork)
     {

@@ -11,6 +11,7 @@ namespace IssueTracking.Services.Helpers
         public static class General
         {
             public static string Error => $"Hata";
+            public static string Success => $"Başarılı";
             public static string NotFound(bool isPlural)
             {
                 if (isPlural) 

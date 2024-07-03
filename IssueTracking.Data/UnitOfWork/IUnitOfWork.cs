@@ -1,24 +1,19 @@
 ﻿using IssueTracking.Data.Repositories.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IssueTracking.Data.UnitOfWork;
 
 public interface IUnitOfWork : IAsyncDisposable
 {
-    ICommentRepository CommentRepository { get; }
-    IFileAttachmentRepository FileAttachmentRepository{ get; }
-    IIssueAssigneeRepository IssueAssigneeRepository { get; }
-    IIssueRepository IssueRepository  { get; }
-    IProjectRepository ProjectRepository  { get; }
-    IPriorityRepository PriorityRepository  { get; }
-    IRoleRepository RoleRepository  { get; }
-    IStatusRepository StatusRepository  { get; }
-    ITimeEntryRepository TimeEntryRepository  { get; }
-    IUserRepository UserRepository  { get; }
+    ICommentRepository Comment { get; }
+    IFileAttachmentRepository FileAttachment { get; }
+    IIssueAssigneeRepository IssueAssignee { get; }
+    IIssueRepository Issue { get; }
+    IProjectRepository Project { get; }
+    IPriorityRepository Priority { get; }
+    IRoleRepository Role { get; }
+    IStatusRepository Status { get; }
+    ITimeEntryRepository TimeEntry { get; }
+    IUserRepository User { get; }
 
     Task<int> SaveAsync();
 

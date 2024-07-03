@@ -1,14 +1,13 @@
 ﻿using IssueTracking.Core.BaseRepository;
+using IssueTracking.Core.Entities;
 
 namespace IssueTracking.Entities.Models;
 
-public class Project : IEntity
+public class Project : BaseEntity, IEntity
 {
-    public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
+    public string Code { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
-    public DateTime StartDate { get; set; } = DateTime.Now;
-    public DateTime EndDate { get; set; } = DateTime.Now;
 
     public ICollection<Issue>? Issues { get; set; }
 }
