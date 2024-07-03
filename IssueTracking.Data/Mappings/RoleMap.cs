@@ -8,6 +8,8 @@ public class RoleMap : IEntityTypeConfiguration<Role>
 {
     public void Configure(EntityTypeBuilder<Role> builder)
     {
-        throw new NotImplementedException();
+        //Base
+        builder.HasKey(c => c.Id);
+        builder.Property(c => c.Id).ValueGeneratedOnAdd();
     }
 }

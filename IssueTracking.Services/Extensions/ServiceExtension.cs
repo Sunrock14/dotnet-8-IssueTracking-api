@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using IssueTracking.Data.Contexts;
 using IssueTracking.Data.UnitOfWork;
 using IssueTracking.Services.Automapper.Profiles;
 using IssueTracking.Services.Businesses.Projects;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -13,19 +15,19 @@ using Swashbuckle.AspNetCore.Filters;
 using System.Text;
 
 namespace IssueTracking.Services.Extensions;
-public static class ServiceCollector
+public static class ServiceExtension
 {
     private const string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
     public static void LoadCustomServices(this IServiceCollection services, IConfiguration configuration)
     {
+        //ConnectionString
         var conn = configuration.GetConnectionString("LocalDB");
-        //services.AddDbContext<Context>(options => options.UseSqlServer(conn).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
-        //services.AddDbContext<Context>(options => options.UseSqLite(conn).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+        services.AddDbContext<IssueTrackingContext>(options => options.UseSqlServer(conn).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
 
         //Custom Services
-        services.AddScoped<IUnitOfWork, UnitOfWork>();
-        services.AddScoped<IProjectService, ProjectManager>();
+        //services.AddScoped<IUnitOfWork, UnitOfWork>();
+        //services.AddScoped<IProjectService, ProjectManager>();
 
     }
     public static void LoadAutoMapperService(this IServiceCollection services)

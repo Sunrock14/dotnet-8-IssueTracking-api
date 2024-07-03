@@ -8,6 +8,8 @@ public class FileAttachmentMap : IEntityTypeConfiguration<FileAttachment>
 {
     public void Configure(EntityTypeBuilder<FileAttachment> builder)
     {
-        throw new NotImplementedException();
+        //Base
+        builder.HasKey(c => c.Id);
+        builder.Property(c => c.Id).ValueGeneratedOnAdd();
     }
 }

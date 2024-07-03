@@ -14,6 +14,6 @@ public class FileAttachment : IEntity
     public string FilePath { get; set; } = string.Empty;
     public DateTime UploadedAt { get; set; } = DateTime.Now;
 
-    public int IssueId { get; set; }
-    public Issue Issue { get; set; } = new();
+    //public int IssueId { get; set; }
+    //public Issue Issue { get; set; } = new();
 }

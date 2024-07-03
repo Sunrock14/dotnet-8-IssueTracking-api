@@ -23,25 +23,25 @@ public class UnitOfWork : IUnitOfWork
         _context = context;
     }
 
-    public ICommentRepository CommentRepository => _commentRepository ??= new CommentRepository(_context);
+    public ICommentRepository Comment => _commentRepository ??= new CommentRepository(_context);
 
-    public IFileAttachmentRepository FileAttachmentRepository => _fileAttachmentRepository ??= new FileAttachmentRepository(_context);
+    public IFileAttachmentRepository FileAttachment => _fileAttachmentRepository ??= new FileAttachmentRepository(_context);
 
-    public IIssueAssigneeRepository IssueAssigneeRepository => _ıssueAssigneRepository ??= new IssueAssigneRepository(_context);
+    public IIssueAssigneeRepository IssueAssignee => _ıssueAssigneRepository ??= new IssueAssigneRepository(_context);
 
-    public IIssueRepository IssueRepository => _ıssueRepository ??= new IssueRepository(_context);
+    public IIssueRepository Issue => _ıssueRepository ??= new IssueRepository(_context);
 
-    public IProjectRepository ProjectRepository => _projectRepository ??= new ProjectRepository(_context);
+    public IProjectRepository Project => _projectRepository ??= new ProjectRepository(_context);
 
-    public IPriorityRepository PriorityRepository => _priorityRepository??= new PriorityRepository(_context);
+    public IPriorityRepository Priority => _priorityRepository??= new PriorityRepository(_context);
 
-    public IRoleRepository RoleRepository => _roleRepository ??= new RoleRepository(_context);
+    public IRoleRepository Role => _roleRepository ??= new RoleRepository(_context);
 
-    public IStatusRepository StatusRepository => _statusRepository??= new StatusRepository(_context);
+    public IStatusRepository Status => _statusRepository??= new StatusRepository(_context);
 
-    public ITimeEntryRepository TimeEntryRepository => _timeEntryRepository??= new TimeEntryRepository(_context);
+    public ITimeEntryRepository TimeEntry => _timeEntryRepository??= new TimeEntryRepository(_context);
 
-    public IUserRepository UserRepository => _userRepository ??= new UserRepository(_context);
+    public IUserRepository User => _userRepository ??= new UserRepository(_context);
 
     public async Task<int> SaveAsync()
     {

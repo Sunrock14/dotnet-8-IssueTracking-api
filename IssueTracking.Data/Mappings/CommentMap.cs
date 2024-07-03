@@ -8,6 +8,8 @@ public class CommentMap : IEntityTypeConfiguration<Comment>
 {
     public void Configure(EntityTypeBuilder<Comment> builder)
     {
-        throw new NotImplementedException();
+        //Base
+        builder.HasKey(c => c.Id);
+        builder.Property(c => c.Id).ValueGeneratedOnAdd();
     }
 }

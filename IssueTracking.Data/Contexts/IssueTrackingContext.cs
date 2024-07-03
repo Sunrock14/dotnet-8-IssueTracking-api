@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IssueTracking.Data.Contexts;
 
-public class TaskTrackingContext : DbContext
+public class IssueTrackingContext : DbContext
 {
     public DbSet<Project> Projects { get; set; }
     public DbSet<Issue> Issues { get; set; }
@@ -16,12 +16,9 @@ public class TaskTrackingContext : DbContext
     public DbSet<Role> Roles { get; set; }
     public DbSet<TimeEntry> TimeEntries { get; set; }
     public DbSet<IssueAssignee> IssueAssignees { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public IssueTrackingContext(DbContextOptions<IssueTrackingContext> options) : base(options)
     {
-
     }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new CommentMap());

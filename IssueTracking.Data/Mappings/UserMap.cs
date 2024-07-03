@@ -8,6 +8,8 @@ public class UserMap : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        throw new NotImplementedException();
+        //Base
+        builder.HasKey(c => c.Id);
+        builder.Property(c => c.Id).ValueGeneratedOnAdd();
     }
 }

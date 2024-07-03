@@ -9,10 +9,11 @@ public class User : IEntity
     public string Password { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
 
-    public int RoleId { get; set; }
-    public Role Role { get; set; } = new();
+    //public int RoleId { get; set; }
+    //public Role Role { get; set; } = new();
 
-    public ICollection<Issue>? ReportedIssues { get; set; }
+    //public ICollection<Issue>? ReportedIssues { get; set; }
 
     public ICollection<IssueAssignee>? IssueAssignees { get; set; }
+    //public ICollection<Comment>? Comments{ get; set; }
 }

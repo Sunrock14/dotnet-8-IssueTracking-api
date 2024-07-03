@@ -9,7 +9,9 @@ namespace IssueTracking.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<Issue> builder)
         {
-            throw new NotImplementedException();
+            //Base
+            builder.HasKey(c => c.Id);
+            builder.Property(c => c.Id).ValueGeneratedOnAdd();
         }
     }
 }

@@ -8,6 +8,8 @@ public class IssueAssingneeMap : IEntityTypeConfiguration<IssueAssignee>
 {
     public void Configure(EntityTypeBuilder<IssueAssignee> builder)
     {
-        throw new NotImplementedException();
+        //Base
+        builder.HasKey(c => c.Id);
+        builder.Property(c => c.Id).ValueGeneratedOnAdd();
     }
 }

@@ -8,6 +8,8 @@ public class PriorityMap : IEntityTypeConfiguration<Priority>
 {
     public void Configure(EntityTypeBuilder<Priority> builder)
     {
-        throw new NotImplementedException();
+        //Base
+        builder.HasKey(c => c.Id);
+        builder.Property(c => c.Id).ValueGeneratedOnAdd();
     }
 }

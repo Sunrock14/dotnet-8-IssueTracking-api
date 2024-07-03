@@ -8,6 +8,8 @@ public class TimeEntryMap : IEntityTypeConfiguration<TimeEntry>
 {
     public void Configure(EntityTypeBuilder<TimeEntry> builder)
     {
-        throw new NotImplementedException();
+        //Base
+        builder.HasKey(c => c.Id);
+        builder.Property(c => c.Id).ValueGeneratedOnAdd();
     }
 }
