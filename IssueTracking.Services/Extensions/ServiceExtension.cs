@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using IssueTracking.Data.Contexts;
-using IssueTracking.Data.UnitOfWork;
 using IssueTracking.Services.Automapper.Profiles;
-using IssueTracking.Services.Businesses.Projects;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +15,7 @@ using System.Text;
 namespace IssueTracking.Services.Extensions;
 public static class ServiceExtension
 {
+    //İzin verilen 
     private const string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
     public static void LoadCustomServices(this IServiceCollection services, IConfiguration configuration)
     {
